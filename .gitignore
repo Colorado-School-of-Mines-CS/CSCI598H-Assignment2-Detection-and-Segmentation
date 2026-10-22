@@ -25,6 +25,8 @@ datasets/
 **/*.ckpt
 **/*.safetensors
 **/weights/
+!yolov8_experiments/
+!sam_experiments/
 
 # Training and service caches
 runs/
