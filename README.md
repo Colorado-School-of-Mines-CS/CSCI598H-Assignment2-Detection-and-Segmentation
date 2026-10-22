@@ -38,7 +38,7 @@ load the COCO-pretrained
 
 - **Quantitative comparison**: Present a table comparing the models before and after fine-tuning. Report [box AP50 and mAP (i.e. mean of box AP50 - AP95), mask AP50 and mAP (i.e. mean of mask AP50 - AP95)](https://docs.ultralytics.com/tasks/segment#val), latency in ms/frame, throughput in frames/second (FPS), and peak GPU memory. Include absolute and relative changes for each metric, with units clearly specified.
 
-- **Qualitative comparison**: Select four representative images from the test set and show the ground truth alongside paired before/after predictions for each image. Include at least one improved example and one remaining failure. Briefly describe the changes in detection and segmentation quality and any errors that remain.
+- **Qualitative comparison**: Select four representative images from the test set and show the ground truth alongside paired before/after predictions for each image. Include at least one improved example and one remaining failure. Briefly describe the changes in detection and segmentation quality and any errors that remain. Note: save the segmentation results by overlaying the mask on the original image with opacity, e.g., `data/videos/swing_first_frame_mask/00000.png`.
 
 Quick setup check:
 
@@ -86,15 +86,16 @@ Downlaod five videos from the **[Google Drive](https://drive.google.com/drive/fo
 |---|---|---|---|
 | 1 | `bear`      | `"bear"`       | `00000_bear.png`|
 | 2 | `blackswan` | `"black swan"` | `00000_blackswan.png`|
-| 3 | `dogs`      | `"black dog"` `"yellow dog"` | `00000_black_dog.png` `00000_yellow_dog.png`|
-| 4 | `judo`      | `"left player"` `"right player"` | `00000_left_player.png` `00000_right_player.png`|
-| 5 | `swing`     | `"girl"`       | `00000_girl.png`|
+| 3 | `dogs`      | `"yellow dog"` `"black dog"` | `00000_yellow_dog.png` `00000_black_dog.png`|
+| 4 | `judo`      | `"right player"` `"left player"` | `00000_right_player.png` `00000_left_player.png`|
+| 5 | `swing`     | `"girl"`  `"swing"` `"black cord held in hand"`| `00000_girl.png` `00000_swing.png` `00000_black_cord_held_in_hand.png`|
 
 Evaluate [SAM 3.1](https://github.com/facebookresearch/sam3) using two separate settings:
 
 - **Visual prompts:** Taking the **first-frame** GT mask as visual prompt, then propagate through the video.
 - **Text prompts:** Provide the fixed text prompt on the first frame, then segment and track the matching objects throughout the video.
 
+**Performance comparison**: Save the video segmentation results by overlaying the mask on the original image with opacity, e.g., `data/videos/swing_first_frame_mask/00000.png`.
 
 Implement Part 2 in `sam_experiments/`, run SAM entries in
 `experiments.json`, and save all results in `outputs/`.

@@ -17,6 +17,7 @@ venv/
 
 # Assignment 2 datasets and downloaded video inputs
 data/
+!data/videos/swing_first_frame_mask
 datasets/
 
 # Assignment 2 model checkpoints and weights

@@ -70,4 +70,6 @@
 | 3 | `dogs` | `"yellow dog"` | TBD | TBD |
 | 4 | `judo` | `"left player"`  | TBD | TBD |
 | 4 | `judo` | `"right player"` | TBD | TBD |
-| 5 | `swing` | `"girl"` | TBD | TBD |
+| 5 | `swing` | `"girl"`        | TBD | TBD |
+| 5 | `swing` | `"gswing`       | TBD | TBD |
+| 5 | `swing` | `"girl"`        | TBD | TBD |
