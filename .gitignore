@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Assignment 2 datasets and downloaded video inputs
+data/
+datasets/
+
+# Assignment 2 model checkpoints and weights
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.safetensors
+**/weights/
+
+# Training and service caches
+runs/
+wandb/
+.cache/
+**/.cache/
+
+# Temporary files
+*.tmp
+*.log
+*~

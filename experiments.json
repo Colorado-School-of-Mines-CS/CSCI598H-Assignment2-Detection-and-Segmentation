@@ -1,0 +1,22 @@
+{
+  "seed": 42,
+  "dataset_config": "dataset.yaml",
+  "runs": [
+    {"id": "yolo_pretrained", "model": "yolov8n-seg", "task": "image", "mode": "evaluate_pretrained"},
+    {"id": "yolo_finetuned", "model": "yolov8n-seg", "task": "image", "mode": "finetune_then_evaluate"},
+    {"id": "sam1_point", "model": "sam1", "task": "image", "prompt_type": "positive_point"},
+    {"id": "sam1_points", "model": "sam1", "task": "image", "prompt_type": "positive_negative_points"},
+    {"id": "sam1_box", "model": "sam1", "task": "image", "prompt_type": "box"},
+    {"id": "sam1_auto", "model": "sam1", "task": "image", "prompt_type": "automatic"},
+    {"id": "sam21_point", "model": "sam2.1", "task": "image", "prompt_type": "positive_point"},
+    {"id": "sam21_box", "model": "sam2.1", "task": "image", "prompt_type": "box"},
+    {"id": "sam21_video", "model": "sam2.1", "task": "video", "prompt_type": "initial_visual"},
+    {"id": "sam21_video_corrected", "model": "sam2.1", "task": "video", "prompt_type": "visual_correction"},
+    {"id": "sam31_text", "model": "sam3.1", "task": "image", "prompt_type": "text"},
+    {"id": "sam31_specific_text", "model": "sam3.1", "task": "image", "prompt_type": "specific_text"},
+    {"id": "sam31_absent_text", "model": "sam3.1", "task": "image", "prompt_type": "absent_text"},
+    {"id": "sam31_point", "model": "sam3.1", "task": "image", "prompt_type": "positive_point"},
+    {"id": "sam31_box", "model": "sam3.1", "task": "image", "prompt_type": "box"},
+    {"id": "sam31_video_text", "model": "sam3.1", "task": "video", "prompt_type": "text"}
+  ]
+}
